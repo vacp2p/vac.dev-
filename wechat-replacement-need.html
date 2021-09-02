@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en-US">
+  <head>
+  
+  <title>Vac - What Would a WeChat Replacement Need?</title>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Vac</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link
+    rel="shortcut icon"
+    href="/assets/img/favicon.png"
+    type="image/png"
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+  <body class="h-full flex flex-col">
+    <div
+      class="flex-grow container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6"
+    >
+      <header>
+  <div class="container max-w-screen-xl sm:border-b">
+    <div
+      class="
+        nav-section
+        flex
+        justify-between
+        items-center
+        py-3
+        md:py-5
+        lg:py-10
+      "
+    >
+      <div class="logo md:pr-8 l:p-0">
+        <a href="/"
+          ><img src="/assets/img/logo.png"
+        /></a>
+      </div>
+      <div class="flex justify-between items-center w-9/12">
+        <div class="burger block sm:hidden z-50">
+          <button
+            class="
+              burger__button burger__button--open
+              fixed
+              top-2
+              right-5
+              w-12
+              h-12
+            "
+            type="button"
+            aria-label="Mobile menu button"
+          >
+            <img
+              class="burger__icon"
+              src="/assets/img/burger.svg"
+              alt="Open menu button"
+            />
+          </button>
+          <button
+            class="
+              burger__button burger__button--close
+              hidden
+              fixed
+              top-2
+              right-5
+              w-12
+              h-12
+            "
+            type="button"
+            aria-label="Close mobile menu button"
+          >
+            <img
+              class="burger__icon burger__icon--close"
+              src="/assets/img/close.svg"
+              alt="Close menu button"
+            />
+          </button>
+        </div>
+
+        <nav class="nav max-w-screen-xm md:max-w-screen-sl container">
+          <ul
+            class="
+              nav__list
+              hidden
+              sm:flex
+              justify-between
+              container
+              text-xs
+              font-semibold
+              md:pr-8
+              l:p-0
+            "
+          >
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join VAC</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://specs.vac.dev" target="_blank" rel="noopener noreferrer"
+    >Specs</a
+  >
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer"
+    >Forum</a
+  >
+  
+</li>
+ 
+          </ul>
+        </nav>
+
+        <ul class="social items-center hidden md:flex">
+          <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer"
+    ><svg
+      width="25"
+      height="21"
+      viewBox="0 0 25 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer"
+    ><svg
+      width="26"
+      height="25"
+      viewBox="0 0 26 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a
+    href="https://discord.gg/PQFdubGt6d"
+    target="_blank"
+    rel="noopener noreferrer"
+    ><svg
+      width="25"
+      height="21"
+      viewBox="0 0 25 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+        </ul>
+      </div>
+
+      <div
+        class="
+          overlay
+          container
+          max-w-screen-sm
+          w-full
+          hidden
+          sm:hidden
+          fixed
+          top-0
+          right-0
+          h-screen
+          bg-black bg-opacity-40
+          z-30
+        "
+      >
+        <nav
+          class="
+            nav-mobile
+            hidden
+            fixed
+            top-0
+            right-0
+            flex flex-col
+            justify-between
+            items-center
+            pt-14
+            px-12
+            pb-5
+            bg-white
+            w-9/12
+            h-3/4
+            z-40
+          "
+        >
+          <ul
+            class="
+              nav__list
+              flex flex-col flex-1
+              justify-between
+              items-center
+              container
+              box-content
+              w-32
+              h-auto
+              max-h-nav
+              text-xs
+              font-normal
+            "
+          >
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join VAC</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://specs.vac.dev" target="_blank" rel="noopener noreferrer"
+    >Specs</a
+  >
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer"
+    >Forum</a
+  >
+  
+</li>
+ 
+          </ul>
+          <ul class="social items-center flex mt-8">
+            <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer"
+    ><svg
+      width="25"
+      height="21"
+      viewBox="0 0 25 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer"
+    ><svg
+      width="26"
+      height="25"
+      viewBox="0 0 26 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a
+    href="https://discord.gg/PQFdubGt6d"
+    target="_blank"
+    rel="noopener noreferrer"
+    ><svg
+      width="25"
+      height="21"
+      viewBox="0 0 25 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      class="hover:opacity-50"
+    >
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="bg-white text-black flex flex-col"><section
+  class="
+    container
+    max-w-screen-xl
+    flex flex-col
+    sm:flex-row
+    pt-10
+    pb-0
+    md:pb-10
+    lg:pb-0
+  "
+>
+  <div
+    class="
+      heading-block
+      w-full
+      sm:w-2/12
+      lg:w-3/12
+      flex
+      lg:justify-center
+      items-start
+      pb-3
+      sm:pb-0
+    "
+  >
+    <a class="link link--back" href="/research-log/">Back</a>
+  </div>
+  <div
+    class="info-block w-full sm:w-10/12 lg:w-9/12 pb-5 sm:pb-10 overflow-hidden"
+  >
+    <div class="post mb-10">
+      <h1 class="text-xl md:text-xxl mb-5 sm:max-w-md lg:max-w-2xl">
+        What Would a WeChat Replacement Need?
+      </h1>
+      <div>
+        <span class="text-s lg:text-base">
+          16 Apr 2020 • by
+        </span>
+        <a
+          href="/authors/oskarth"
+          class="text-s lg:text-base font-bold hover:underline"
+          >oskarth</a
+        >
+      </div>
+    </div>
+    <div class="post__content"><p>What would it take to replace WeChat? More specifically, what would a self-sovereign, private, censorship-resistant and open alternative look like? One that allows people to communicate, coordinate and transact freely.</p>
+
+<h2 id="background">Background</h2>
+
+<h3 id="what-wechat-provides-to-the-end-user">What WeChat provides to the end-user</h3>
+
+<p>Let’s first look at some of the things that WeChat providers. It is a lot:</p>
+
+<ul>
+  <li><strong>Messaging:</strong> 1:1 and group chat. Text, as well as voice and video. Post gifs. Share location.</li>
+  <li><strong>Group chat:</strong> Limited to 500 people; above 100 people people need to verify with a bank account. Also has group video chat and QR code to join a group.</li>
+  <li><strong>Timeline/Moments:</strong> Post comments with attachments and have people like/comment on it.</li>
+  <li><strong>Location Discovery:</strong> See WeChat users that are nearby.</li>
+  <li><strong>Profile:</strong> Nickname and profile picture; can alias people.</li>
+  <li><strong>“Broadcast” messages:</strong> Send one message to many contacts, up to 200 people (spam limited).</li>
+  <li><strong>Contacts:</strong> Max 5000 contacts (people get around it with multiple accounts and sim cards).</li>
+  <li><strong>App reach:</strong> Many diferent web apps, extensions, native apps, etc. Scan QR code to access web app from phone.</li>
+  <li><strong>Selective posting:</strong> Decide who can view your posts and who can view your comments on other people’s post.</li>
+  <li><strong>Transact:</strong> Send money gifts through red envelopes.</li>
+  <li><strong>Transact:</strong> Use WeChat pay to transfer money to friends and businesses; linked account with Alipay that is connected to your bank account.</li>
+  <li><strong>Services:</strong> Find taxis and get notifications; book flights, train tickets, hotels etc.</li>
+  <li><strong>Mini apps:</strong> API for all kinds of apps that allow you to provide services etc.</li>
+  <li><strong>Picture in picture:</strong> allowing you to have a video call while using the app.</li>
+</ul>
+
+<p>And much more. Not going to through it all in detail, and there are probably many things I don’t know about WeChat since I’m not a heavy user living in mainland China.</p>
+
+<h3 id="how-wechat-works---a-toy-model">How WeChat works - a toy model</h3>
+
+<p>This is an overly simplistic model of how WeChat works, but it is sufficient for our purposes. This general design applies to most traditional client-server apps today.</p>
+
+<p>To sign up for account you need a phone number or equivalent. To get access to some features you need to verify your identity further, for example with official ID and/or bank account.</p>
+
+<p>When you signup this creates an entry in the WeChat server, from now on treated as a black box. You authenticate with that box, and thats where you get your messages from. If you go online the app asks that box for messages you have received while you were offline. If you login from a different app your contacts and conversations are synced from that box.</p>
+
+<p>The box gives you an account, it deals with routing to your contacts, it stores messages and attachments and gives access to mini apps that people have uploaded. For transacting money, there is a partnership with a different company that has a different box which talks to your bank account.</p>
+
+<p>This is done in a such a way that they can support a billion users with the features above, no sweat.</p>
+
+<p>Whoever controls that box can sees who you are talking with and what the content of those messages are. There is no end to end encryption. If WeChat/Tencent disagrees with you for some reason they can ban you. This means you can’t interact with the box under that name anymore.</p>
+
+<h2 id="what-do-we-want">What do we want?</h2>
+
+<p>We want something that is self-sovereign, private, censorship-resistant and open that allows individuals and groups of people to communicate and transact freely. To explore what this means in more detail, without getting lost in the weeds, we provide the following list of properties. A lot of these are tied together, and some fall out of the other requirements. Some of them stand in slight opposition to each other.</p>
+
+<p><strong>Self-sovereignity identity</strong>. Exercises authority within your own sphere. If you aren’t harming anyone, you should be able to have an account and communicate with other people.</p>
+
+<p><strong>Pseudonymity, and ideally total anonymity</strong>. Not having your identity tied to your real name (e.g. through phone number, bank account, ID, etc). This allows people to act more freely without being overly worried about censorship and coercion in the real world. While total anonymity is even more desirable - especially to break multiple hops to a true-name action - real-world constraints sometimes makes this more challenging.</p>
+
+<p><strong>Private and secure communication</strong>. Your communication and who you transact with should be for your eyes only. This includes transactions (transfer of value) as a form of communication.</p>
+
+<p><strong>Censorship-resistance</strong>. Not being able to easily censor individuals on the platform. Both at an individual, group and collective level. Not having single points of failure that allow service to be disrupted.</p>
+
+<p><strong>Decentralization</strong>. Partly falls out of censorship-resistance and other properties. If infrastructure isn’t decentralized it means there’s a single point of failure that can be disrupted. This is more of a tool than a goal on its own, but it is an important tool.</p>
+
+<p><strong>Built for mass adoption</strong>. Includes scalabiltiy, UX (latency, reliability, bandwidth consumption, UI etc), and allowing for people to stick around. One way of doing this is to allow users to discover people they want to talk to.</p>
+
+<p><strong>Scalability</strong>. Infrastructure needs to support a lot of users to be a viabile alternative. Like, a billion of them (eventually).</p>
+
+<p><strong>Fundamentals in place to support great user experience</strong>. To be a viable alternative, aside from good UI and distribution, fundamentals such as latency, bandwidth usage, consistency etc must support great UX to be a viable alternative.</p>
+
+<p><strong>Works for resource restricted devices, including smartphones</strong>. Most people will use a smartphone to use this. This means it has to work well on them and similar devices, without becoming a second-class citizen where we ignore properties such as censorship-resistance and privacy. Some concession to reality will be necessary due to additional constraints, which leads us to…</p>
+
+<p><strong>Adaptive nodes</strong>. Nodes will have different capabilities, and perhaps at different times. To maintain a lot of the properties described here it is desirable if as many participants as possible are first-class citizens. If a phone is switching from a limited data plan to a WiFi network or from battery to AC power it can do more useful work, and so on. Likewise for a laptop with a lot of free disk space and spare compute power, etc.</p>
+
+<p><strong>Sustainable</strong>. If there’s no centralized, top down ad-driven model, this means all the infrastructure has to be sustainable somehow. Since these are individual entitites, this means it has to be paid for. While altruistic modes and similar can be used, this likely requires some form of incentivization scheme for useful services provided in the network. Related: free rider problem.</p>
+
+<p><strong>Spam resistant</strong>. Relates to sustainability, scalability and built for mass adoption. Made more difficult by pseudonymous identity due to whitewashing attacks.</p>
+
+<p><strong>Trust-minimized</strong>. To know that properties are provided for and aren’t compromised, various ways of minimizing trust requirements are useful. This also related to mass adoption and social cohesion. Examples include: open and audited protocols, open source, reproducible builds, etc. This also relates to how mini apps are provided for, since we may not know their source but want to be able to use them anyway.</p>
+
+<p><strong>Open source</strong>. Related to above, where we must be able to inspect the software to know that it functions as advertised and hasn’t been compromised, e.g. by uploading private data to a third party.</p>
+
+<p>Some of these are graded and a bit subtle, i.e.:</p>
+
+<ul>
+  <li>Censorship resistance would ideally be able to absorb Internet shutdowns. This would require an extensive MANET/meshnet infrastructure, which while desirable, requires a lot of challenges to be overcome to be feasible.</li>
+  <li>Privacy would ideally make all actions (optionally) totally anoymous, though this may incur undue costs on bandwidth and latency, which impacts user experience.</li>
+  <li>Decentralization, certain topologies, such as DHTs, are efficient and quite decentralized but still have some centralized aspects, which makes it attackable in various ways. Ditto for blockchains compared with bearer instruments which requires some coordinating infrastructure, compared with naturally occuring assets such as precious metals.</li>
+  <li>“Discover people” and striving for “total anonymity” might initially seem incompatible. The idea is to provide for sane defaults, and then allow people to decide how much information they want to disclose. This is the essence of privacy.</li>
+  <li>Users often want <em>some</em> form of moderation to get a good user experience, which can be seen as a form of censorship. The idea to raise the bar on the basics, the fundamental infrastructure. If individuals or specific communities want certain moderation mechanisms, that is still a compatible requirement.</li>
+</ul>
+
+<h3 id="counterpoint-1">Counterpoint 1</h3>
+
+<p>We could refute the above by saying that the design goals are undesirable. We want a system where people can censor others, and where everyone is tied to their real identity. Or we could say something like, freedom of speech is a general concept, and it doesn’t apply to Internet companies, even if they provide a vital service. You can survive without it and you should’ve read the terms of service. This roughly charactericizes the mainstream view.</p>
+
+<p>Additional factor here is the idea that a group of people know more about what’s good for you then you do, so they are protecting you.</p>
+
+<h3 id="counterpoint-2">Counterpoint 2</h3>
+
+<p>We could agree with all these design goals, but think they are too extreme in terms of their requirements. For example, we could operate as a non profit, take donations and volunteers, and then host the whole infrastructure ourselves. We could say we are in a friendly legislation, so we won’t be a single point of failure. Since we are working on this and maybe even our designs are open, you can trust us and we’ll provide service and infrastructure that gives you what you want without having to pay for it or solve all these complex decentralized computation and so on problems. If you don’t trust us for some reason, you shouldn’t use us regardless. Also, this is better than status quo. And we are more likely to survive by doing this, either by taking shortcuts or by being less ambituous in terms of scope.</p>
+
+<h2 id="principal-components">Principal components</h2>
+
+<p>There are many ways to skin a cat, but this is one way of breaking down the problem. We have a general direction with the properties listed above, together with some understanding of how WeChat works for the everday user. Now the question is, what infrastructure do we need to support this? How do we achieve the above properties, or at least get closer to them? We want to figure out the necessary building blocks, and one of doing this is to map out likely necessary components.</p>
+
+<h3 id="background-ethereum-and-web3-stack">Background: Ethereum and Web3 stack</h3>
+
+<p>It is worth noting that a lot of the required infrastructure has been developed, at least as concepts, in the original Ethereum / Web3 vision. In it there is Ethereum for consensus/compute/transact, storage through Swarm, and communication through Whisper. That said, the main focus has been on the Ethereum blockchain itself, and a lot of things have happened in the last 5y+ with respect to technology around privacy and scalabilty. It is worth revisiting things from a fresh point of view, with the WeChat alternative in mind as a clear use case.</p>
+
+<h3 id="account---self-sovereign-identity-and-the-perils-of-phone-numbers">Account - self-sovereign identity and the perils of phone numbers</h3>
+
+<p>Starting from the most basic: what is an account and how do you get one? With most internet services today, WeChat and almost all popular messaging apps included, you need to signup with some centralized authority. Usually you also have to verify this with some data that ties this account to you as an individual. E.g. by requiring a phone number, which in most jurisdictions <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> means giving out your real ID. This also means you can be banned from using the service by a somewhat arbitrary process, with no due process.</p>
+
+<p>Now, we could argue these app providers can do what they want. And they are right, in a very narrow sense. As apps like WeChat (and Google) become general-purpose platforms, they become more and more ingrained in our everyday lives. They start to provide utilities that we absolutely require to work to go about our day, such as paying for food or transportation. This means we need higher standard than this.</p>
+
+<p>Justifications for requiring phone numbers are usually centered around three claims:</p>
+
+<ol>
+  <li>Avoiding spam</li>
+  <li>Tying your account to your real name, for various reasons</li>
+  <li>Using as a commonly shared identifier as a social network discovery mechanism</li>
+</ol>
+
+<p>Of course, many services require more than phone numbers. E.g. email, other forms of personal data such as voice recording, linking a bank account, and so on.</p>
+
+<p>In contrast, a self-sovereign system would allow you to “create an account” completely on your own. This can easily be done with public key cryptograpy, and it also paves the way for end-to-end encryption to make your messages private.</p>
+
+<p>The main issue with this that you need to get more creative about avoiding spam (e.g. through white washing attacks), and ideally there is some other form of social discovery mechanism.</p>
+
+<p>Just having a public key as an account isn’t enough though. If it goes through a central server, then nothing is stopping that server from arbitrarly blocking requests related to that public key. Of course, this also depends on how transparent such requests are. Fundamentally, lest we rely completely on goodwill, there needs to be multiple actors by which you can use the service. This naturally points to decentralization as a requirement. See counterpoint.</p>
+
+<p>Even so, if the system is closed source we don’t know what it is doing. Perhaps the app communicating is also uploading data to another place, or somehow making it possible to see who is who and act accordingly.</p>
+
+<p>You might notice that just one simple property, self-sovereign identity, leads to a slew of other requirements and properties. You might also notice that WeChat is far from alone in this, even if their identity requirements might be a bit stringent than, say, Telegram. Their control aspects are also a bit more extreme, at least for someone with western sensibilities <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
+
+<p>Most user facing applications have similar issues, Google Apps/FB/Twitter etc. For popular tools that have this built in, we can look at git - which is truly decentralized and have keypair at the bottom. It is for a very specific technical domain, and even then people rely on Github. Key management is fairly difficult even for technical people, and for normal people even more so. Banks are generally far behind on this tech, relying on arcane procedures and special purpose hardware for 2FA. That’s another big issue.</p>
+
+<p>Let’s shift gears a bit and talk about some other functional requirements.</p>
+
+<h3 id="routing---packets-from-a-to-b">Routing - packets from A to B</h3>
+
+<p>In order to get a lot of the features WeChat provides, we need the ability to do three things: communicate, store data, and transact with people. We need a bit more than that, but let’s focus on this for now.</p>
+
+<p>To communicate with people, in the base case, we need to go from one phone to another phone that is separated by a large distance. This requires some form of routing. The most natural platform to build this on is the existing Internet, though not the only one. Most phones are resource restricted, and are only “on” for brief periods of time. This is needed to preserve battery and bandwidth. Additionally, Internet uses IPs as endpoints, which change as a phones move through space. NAT punching etc isn’t always perfect either. This means we need a way to get a message from one public key to another, and through some intermediate nodes. We can think of these nodes as a form of service network. Similar to how a power grid works, or phone lines, or collection of ISPs.</p>
+
+<p>One important property here is to ensure we don’t end up in a situation like the centralized capture scenario above, something we’ve seen with centralized ISPs <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup> <sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> where they can choose which traffic is good and which is bad. We want to allow the use of different service nodes, just like if a restaurant gives you food poisioning you can go to the one next door and then the first one goes out of business after a while. And the circle of life continues.</p>
+
+<p>We shouldn’t be naive though, and think that this is something nodes are likely to do for free. They need to be adequately compensated for their services, in some of incentivization scheme. That can either be monetary, or as in the case of Bittorrent, more of a barter situation where you use game theory to coordinate with strangers <sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup>, and some form of reputation attached to it (for private trackers).</p>
+
+<p>There are many ways of doing routing, and we won’t go into too much technical detail here. Suffice to say is that you likely want both a structured and unstructured alternative, and that these comes with several trade-offs when it comes to efficiency, metadata protection, ability to incentivize, compatibility with existing topologies, and suitability for mobilephones (mostly offline, bandwidth restricted, not directly connectable). Expect more on this in a future article.</p>
+
+<p>Some of these considerations naturally leads us into the storage and transaction components.</p>
+
+<h3 id="storage---available-and-persistant-for-later">Storage - available and persistant for later</h3>
+
+<p>If mobile phones are mostly offline, we need some way to store these messages so they can be retrieved when online again. The same goes for various kinds attachments as well, and for when people are switching devices. A user might control their timeline, but in the WeChat case that timeline is stored on Tencent’s servers, and queried from there as well. This naturally needs to happen by some other service nodes. In the WeChat case, and for most IMs, the way these servers are paid for is through some indirect ad mechanism. The entity controlling these ads and so on is the same one as the one operating the servers for storage. A more direct model with different entities would see these services being compensated for their work.</p>
+
+<p>We also need storage for attachments, mini-apps, as well as a way of understanding the current state of consensus when it comes to the compute/transact module. In the WeChat case, this state is completely handled by the bank institution or one of their partners, such as Alibaba. When it comes to bearer instruments like cash, no state needs to be kept as that’s a direct exchange in the physical world. This isn’t directly compatible with transfering value over a distance.</p>
+
+<p>All of this state requires availability and persistance. It should be done in a trust minimized fashion and decentralized, which requires some form of incentivization for keeping data around. If it isn’t, you are relying on social cohesion which breaks down at very large scales.</p>
+
+<p>Since data will be spread out across multiple nodes, you need a way to sync data and transfer it in the network. As well as being able to add and query data from it. All of this requires a routing component.</p>
+
+<p>To make it more censorship resistant it might be better to keep it as a general-purpose store, i.e. individuals don’t need to know what they storing. Otherwise, you naturally end up in a situation where individual nodes can be pressured to not store certain content.</p>
+
+<h3 id="messaging---from-me-to-you-to-all-of-us-not-them">Messaging - from me to you to all of us (not them)</h3>
+
+<p>This builds on top of routing, but it has a slightly different focus. The goal is to allow for individuals and groups to communicate in a private, secure and censorship-resistant manner.</p>
+
+<p>It also needs to provide a decent interface to the end user, in terms of dealing seamlessly with offline messages, providing reliable and timely messaging.</p>
+
+<p>In order to get closer to the ideal of total anonymity, it is useful to be able to hide metadata of who is talking to whom. This applies to both normal communication as well as for transactions. Ideally, no one but the parties involved can see who is taking part in a conversation. This can be achieved through various techniques such as mixnets, anonymous credentials, private information retrieval, and so on. Many of these techniques have a fundamental trade-off with latency and bandwidth, something that is a big concern for mobilephones. Being able to do some form of tuning, in an adaptive node manner, depending on your threat model and current capabilities is useful here.</p>
+
+<p>The baseline here is pseudonymity, and having tools to allow individuals to “cut off” ties to their real world identity and transactions. People act different in different circles in the real world, and this should be mimicked online as well. Your company, family or government shouldn’t be able to know what exactly you use your paycheck for, and who you are talking to.</p>
+
+<h3 id="compute---transact-contract-and-settle">Compute - transact, contract and settle</h3>
+
+<p>The most immediate need here is transaction from A to B. Direct exchange. There is also a more indirect need for private lawmaking and contracting.</p>
+
+<p>We talked about routing and storage and how they likely need to be incentivized to work properly. How are they going to be compensated? While this could in theory work via existing banking system and so on, this would be rather heavy. It’d also very likely require tying your identifier to your legal name, something that goes against what we want to achieve. What we want is something that acts more as right-to-access, similar to the way cash functions in a society <sup id="fnref:6" role="doc-noteref"><a href="#fn:6" class="footnote" rel="footnote">6</a></sup>. I pay for a fruit with something that is valuable to you and then I’m on my way.</p>
+
+<p>While there might be other candidates, such as pre-paid debit cards and so on, this transaction mode pretty much requires a cryptocurrency component. The alternative is to do it on a reputation basis, which might work for small communities, due to social cohesion, but quickly detoriates for large ones <sup id="fnref:7" role="doc-noteref"><a href="#fn:7" class="footnote" rel="footnote">7</a></sup>. Ad hoc models like private Bittorrent trackers are centralized and easy to censor.</p>
+
+<p>Now, none of the existing cryptocurrency models are ideal. They also all suffer from lack of widespread use, and it is difficult to get onboarded to them in the first place. Transactions in Bitcoin are slow. Ethereum is faster and has more capabilities, but it still suffers from linking payments over time, which makes the privacy part of this more difficult. Zcash, Monero and similar are interesting, but also require more use. For Zcash, shielded transactions appear to only account for less than 2% of all transactions in 2019 <sup id="fnref:8" role="doc-noteref"><a href="#fn:8" class="footnote" rel="footnote">8</a></sup> <sup id="fnref:9" role="doc-noteref"><a href="#fn:9" class="footnote" rel="footnote">9</a></sup>.</p>
+
+<p>Another dimension is what sets general purpose cryptocurrencies like Ethereum apart. Aside from just paying from A to B, you can encode rules about when something should be paid out and not. This is very useful for doing a form of private lawmaking, contracting, for setting up service agreements with these nodes. If there’s no trivial recourse as in the meatspace world, where you know someone’s name and you can sue them, you need a different kind of model.</p>
+
+<p>What makes something like Zcash interesting is that it works more like digital cash. Instead of leaving a public trail for everyone, where someone can see where you got the initial money from and then trace you across various usage, for Zcash every hop is privacy preserving.</p>
+
+<p>To fulfill the general goals of being censorship resistance and secure, it is also vital that the system being used stays online and can’t be easily disrupted. That points to disintermediation, as opposed to using gateways and exchanges. This is a case where something like cash, or gold, is more direct, since no one can censor this transaction without being physically present where this direct exchange is taking place. However, like before, this doesn’t work over distance.</p>
+
+<h3 id="secure-chat---just-our-business">Secure chat - just our business</h3>
+
+<p>Similar to the messaging module above. The distinction here is that we assume the network part has already taken place. Here we are interested in keeping the contents of messages private, so that means confidentiality/end-to-end encryption, integrity, authentication, as well as forward secrecy and plausible deniability. This means that even if there’s some actor that gets some private key material, or confiscated your phone, there is some level of…ephemerality to your conversations. Another issue here in terms of scalable private group chat.</p>
+
+<h3 id="extensible-mini-apps">Extensible mini apps</h3>
+
+<p>This relates to the compute and storage module above. Essentially we want to provide mini apps as in WeChat, but to do so in a way that is compatible with what we want to achieve more generally. This allows individuals and small businesses to create small tools for various purposes, and coordinate with strangers. E.g. booking a cab or getting an insurance, and so on.</p>
+
+<p>This has a higher dependency on the contracting/general computation aspect. I.e. often it isn’t only a transaction, but you might want to encode some specific rules here that strangers can abide by without having too high trust requirements. As a simple example: escrows.</p>
+
+<p>This also needs an open API that anyone can use. It should be properly secured, so using one doesn’t compromise the rest of the system it is operating in. To be censorship resistant it requires the routing and storage component to work properly.</p>
+
+<h2 id="where-are-we-now">Where are we now?</h2>
+
+<p>Let’s look back at some of desirable properties we set out in the beginning and see how close we are to building out the necessary components. Is it realistic at all or just a pipe dream? We’ll see that there are many building blocks in place, and there’s reason for hope.</p>
+
+<p><strong>Self-sovereignity identity</strong>. Public key crypto and web of trust like constructs makes this possible.</p>
+
+<p><strong>Pseudonymity, and ideally total anonymity</strong>. Pseudonymity can largely be achieved with public key crypto and open systems that allow for permissionless participation. For transactions, pseudonymity exists in most cryptocurrencies. The challenge is linkage across time, especially when interfacing with other “legacy” system. There are stronger constructs that are actively being worked on and are promising here, such as mixnets (Nym), mixers (Wasabi Wallet, Tornado.Cash) and zero knowledge proofs (Zcash, Ethereum, Starkware). This area of applied research has exploded over the last few years.</p>
+
+<p><strong>Private and secure communication</strong>. Signal has pioneered a lot of this, following OTR. Double Ratchet, X3DH. E2EE is minimum these days, and properties like PFS and PD are getting better. For metadata protection, you have Tor, with its faults, and more active research on mixnets and private information retrieval, etc.</p>
+
+<p><strong>Censorship-resistance</strong>. This covers a lot of ground across the spectrum. You have technologies like Bittorrent, Bitcoin/Ethereum, Tor obfuscated transports, E2EE by default, partial mesh networks in production, abilit to move/replicate host machines more quickly have all made this more of a reality than it used to be. this easier. Of course, techniques such as deep packet inspection and internet shutdowns have increased.</p>
+
+<p><strong>Decentralization</strong>. Cryptocurrencies, projects like libp2p and IPFS. Need to be mindful here of many projects that claim decentralization but are still vulnerable to single points of failures, such as relying on gateways.</p>
+
+<p><strong>Built for mass adoption</strong>. This one is more subjective. There’s definitely a lot of work to be done here, both when it comes to fundamental performance, key management and things like social discoverability. Directionally these things are improving and becoming easier for the average person but there is a lot ot be done here.</p>
+
+<p><strong>Scalability</strong>. With projects like Ethereum 2.0 and IPFS more and more resources are a being put into this, both at the consensus/compute layer as well as networking (gossip, scalable Kademlia) layer. Also various layer 2 solutions for transactions.</p>
+
+<p><strong>Fundamentals in place to support great user experience</strong>. Similar to built for mass adoption. As scalability becomes more important, more applied research is being done in the p2p area to improve things like latency, bandwidth.</p>
+
+<p><strong>Works for resource restricted devices, including smartphones</strong>. Work in progress and not enough focus here, generally an after thought. Also have stateless clients etc.</p>
+
+<p><strong>Adaptive nodes</strong>. See above. With subprotocols and capabilities in Ethereum and libp2p, this is getting easier.</p>
+
+<p><strong>Sustainable</strong>. Token economics is a thing. While a lot of it won’t stay around, there are many more projects working on making themselves dispensable. Being open source, having an engaged community and enabling users run their own infrastructure. Users as stakeholders.</p>
+
+<p><strong>Spam resistant</strong>. Tricky problem if you want to be pseudonymous, but some signs of hope with incentivization mechanisms, zero knowledge based signaling, etc. Together with various forms of rate limiting and better controlling of topology and network amplification. And just generally being battle-tested by real world attacks, such as historical Ethereum DDoS attacks.</p>
+
+<p><strong>Trust minimized</strong>. Bitcoin. Zero knowledge provable computation. Open source. Reproducible builds. Signed binaries. Incentive compatible structures. Independent audits. Still a lot of work, but getting better.</p>
+
+<p><strong>Open source</strong>. Big and only getting bigger. Including mainstream companies.</p>
+
+<h2 id="whats-next">What’s next?</h2>
+
+<p>We’ve look at what WeChat provides and what we’d like an alternative to look like. We’ve also seen a few principal modules that are necessary to achieve those goals. To achieve all of this is a daunting task, and one might call it overly ambitiuous. We’ve also seen how far we’ve come with some of the goals, and how a lot of the pieces are there, in one form or another. Then it is a question of putting them all together in the right mix.</p>
+
+<p>The good news is that a lot of people are working all these building blocks and thinking about these problems. Compared to a few years ago we’ve come quite far when it comes to p2p infrastructure, privacy, security, scalability, and general developer mass and mindshare. If you want to join us in building some of these building blocks, and assembling them, check out our forum.</p>
+
+<p>PS. We are <a href="https://status.im/our_team/open_positions.html">hiring protocol engineers</a>. DS</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>Corey, Dean, Jacek.</p>
+
+<h2 id="references">References</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>Mandatory SIM card registration laws: https://privacyinternational.org/long-read/3018/timeline-sim-card-registration-laws <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>On WeChat keyword censorship: https://citizenlab.ca/2016/11/wechat-china-censorship-one-app-two-systems/ <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3" role="doc-endnote">
+      <p>Net Neutrality: https://www.eff.org/issues/net-neutrality <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:4" role="doc-endnote">
+      <p>ISP centralization: https://ilsr.org/repealing-net-neutrality-puts-177-million-americans-at-risk/ <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:5" role="doc-endnote">
+      <p>Incentives Build Robustness in BitTorrent bittorrent.org/bittorrentecon.pdf <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:6" role="doc-endnote">
+      <p>The Case for Electronic Cash: https://coincenter.org/files/2019-02/the-case-for-electronic-cash-coin-center.pdf <a href="#fnref:6" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:7" role="doc-endnote">
+      <p>Money, blockchains, and social scalability: http://unenumerated.blogspot.com/2017/02/money-blockchains-and-social-scalability.html <a href="#fnref:7" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:8" role="doc-endnote">
+      <p>Zcash private transactions (partial paywall): https://www.theblockcrypto.com/genesis/48413/an-analysis-of-zcashs-private-transactions <a href="#fnref:8" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:9" role="doc-endnote">
+      <p>Shielded transactions usage (stats page 404s): https://z.cash/support/faq/ <a href="#fnref:9" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+</div>
+  </div>
+</section>
+</main>
+    </div>
+    <footer class="footer bg-black flex flex-shrink-0 justify-center">
+  <div
+    class="
+      container
+      max-w-screen-xl
+      flex
+      sl:justify-between
+      lm:justify-start
+      p-5
+      pb-10
+      md:px-12 md:pt-5
+      lg:pt-10
+    "
+  >
+    <div class="logo mr-10 sm:mr-0 sm:w-2/12 lg:w-3/12">
+      <a href="/"
+        ><img
+          src="/assets/img/logo.png"
+          alt="Vac logo"
+          class="w-9 h-11"
+      /></a>
+    </div>
+
+    <div
+      class="flex flex-col xm:flex-row xm:justify-between sm:w-10/12 lg:w-9/12"
+    >
+      <p
+        class="
+          hidden
+          ml:inline-block ml:mr-10
+          w-52
+          text-base text-white
+          opacity-75
+          lm:mr-32
+        "
+      >
+        VAC researches peer-to-peer, private, censorship resistant communication
+      </p>
+      <nav class="flex max-w-xs mr-0 xm:mr-5 l:mr-32 mb-5 sm:mb-0">
+        <div class="flex">
+          <div class="flex flex-col mr-5 sm:mr-10 sl:mr-14">
+            <p class="text-base text-white mb-5 lg:mb-4">Research</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://status.im/" target="_blank" rel="noopener noreferrer"
+    >Log</a
+  >
+</li>
+  <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer"
+    >Forum</a
+  >
+</li>
+  <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://status.im/" target="_blank" rel="noopener noreferrer"
+    >Media</a
+  >
+</li>
+  <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://jobs.status.im/?search=Vac" target="_blank" rel="noopener noreferrer"
+    >Careers</a
+  >
+</li>
+ 
+            </ul>
+          </div>
+          <div class="flex flex-col sl:mr-14">
+            <p class="text-base text-white mb-5 lg:mb-4 mr-5">Socials</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer"
+    >Twitter</a
+  >
+</li>
+  <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer"
+    >Discord</a
+  >
+</li>
+  <li class="text-xxs lg:text-base text-white opacity-75 hover:opacity-50 mb-5">
+  <a href="https://t.me/vacp2p" target="_blank" rel="noopener noreferrer"
+    >Telegram</a
+  >
+</li>
+ 
+            </ul>
+          </div>
+        </div></nav>
+
+      <div class="flex flex-col w-52">
+        <h3 class="text-base text-white mb-5">Signup for updates</h3>
+        <form action="" class="footer__form">
+          <div class="flex items-center w-full">
+            <input
+              class="
+                text-xs text-white
+                w-full
+                bg-black
+                border-b border-white
+                rounded-none
+                mr-2
+                focus:outline-none
+                placeholder-white placeholder-opacity-50
+              "
+              type="email"
+              placeholder="your email"
+              required
+            />
+            <button
+              class="
+                h-10
+                w-10
+                bg-arrowWhite bg-auto bg-no-repeat bg-left
+                focus:outline-none
+                hover:opacity-50
+              "
+              type="submit"
+            ></button>
+          </div>
+        </form>
+        <p
+          class="footer__confirm text-base italic text-white opacity-75 hidden"
+        >
+          You signed up! Check your e-mail
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+ <script src="/assets/js/main.js"></script>
+<script src="/assets/js/smooth-scroll.js"></script>
+
+  </body>
+</html>
