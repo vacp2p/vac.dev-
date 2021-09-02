@@ -1,25 +1,34 @@
-# Vac
+# Vac.dev Website
 
-## Requirements
+Originally created by [EthWorks](https://ethworks.io/).
 
-- [Bundler](http://bundler.io/)
-- [Jekyll](https://jekyllrb.com/)
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/)
-- [Ruby](https://www.ruby-lang.org/en/)
+# Development
 
-## Get started
+* Install Depndencies:
+  ```
+  yarn install
+  bundles install
+  ```
+* Build Website
+  ```
+  yarn run build
+  ```
+* For development or server:
+  ```
+  yarn run dev
+  yarn run start
+  ```
 
-### Setting up bundler and jekyll on Apple M1 (with system installed ruby x86_64)
+# Continuous Integration
 
-Running inside project directory:
+* `develop` branch is pushed to [dev.vac.dev](https://dev.vac.dev) via [this CI Job](https://ci.status.im/job/website/job/dev.vac.dev/)
+* `master` branch is pushed to [vac.dev](https://vac.dev) via [this CI Job](https://ci.status.im/job/website/job/vac.dev/)
 
-- `arch -x86_64 gem install --user-install bundler jekyll`
-- `echo 'export PATH="~/.gem/ruby/2.6.0/bin:$PATH"' >> ~/.zshrc`
-- `bundle update`
+# Known Issues
 
-### Working with the project
-
-- `bundle install` to install Ruby gems
-- `npm ci` to install npm packages listed in `package-lock.json`
-- `npm run start` or `npm run dev` to compile the site with development settings and run BrowserSync
+### Bundler and Jekyll on Apple M1 (with Ruby `x86_64`)
+```sh
+arch -x86_64 gem install --user-install bundler jekyll
+echo 'export PATH="~/.gem/ruby/2.6.0/bin:$PATH"' >> ~/.zshrc
+bundle update
+```
