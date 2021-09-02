@@ -43,8 +43,7 @@ pipeline {
     }
 
     stage('Publish Prod') {
-      //when { expression { env.GIT_BRANCH ==~ /.*master/ } }
-      when { expression { !(env.GIT_BRANCH ==~ /.*master/) } }
+      when { expression { env.GIT_BRANCH ==~ /.*master/ } }
       steps {
         sshagent(credentials: ['status-im-auto-ssh']) {
           sh 'yarn run deploy'
@@ -53,8 +52,7 @@ pipeline {
     }
 
     stage('Publish Devel') {
-      //when { expression { !(env.GIT_BRANCH ==~ /.*master/) } }
-      when { expression { (env.GIT_BRANCH ==~ /.*master/) } }
+      when { expression { !(env.GIT_BRANCH ==~ /.*master/) } }
       steps {
         sshagent(credentials: ['jenkins-ssh']) {
           sh """
