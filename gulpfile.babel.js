@@ -46,6 +46,10 @@ task("processStyles", () => {
     .pipe(dest(POST_BUILD_STYLESHEET));
 });
 
+task("cname", () => {
+  return src('assets/CNAME').pipe(dest(SITE_ROOT));
+});
+
 task("images", () => {
   return src(IMAGES)
     .pipe(
@@ -87,7 +91,7 @@ task("startServer", () => {
   );
 });
 
-const buildSite = series("buildJekyll", "processStyles", "images");
+const buildSite = series("buildJekyll", "processStyles", "images", "cname");
 
 exports.serve = series(buildSite, "startServer");
 exports.default = series(buildSite);
