@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en-US">
+  <head>
+  
+  <title>Vac - Opinion: Pseudo-ethics in the Surveillance Tech Industry</title>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Vac</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+  <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="" /></noscript>
+
+  <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+  <script>
+    (function (f, a, t, h, o, m) {
+      a[h] =
+        a[h] ||
+        function () {
+          (a[h].q = a[h].q || []).push(arguments);
+        };
+      (o = f.createElement("script")), (m = f.getElementsByTagName("script")[0]);
+      o.async = 1;
+      o.src = t;
+      o.id = "fathom-script";
+      m.parentNode.insertBefore(o, m);
+    })(document, window, "//fathom.status.im/tracker.js", "fathom");
+    fathom("set", "siteId", "YELIA");
+    fathom("trackPageview");
+  </script>
+  <!-- / Fathom -->
+
+  <!-- Twitter cards -->
+  <meta name="twitter:site" content="@vacp2p" />
+  <meta name="twitter:creator" content="@circe" />
+  <meta name="twitter:title" content="Opinion: Pseudo-ethics in the Surveillance Tech Industry" />
+
+  
+  <meta name="twitter:description" content="A look at typical ethical shortfalls in the global surveillance tech industry." />
+   
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://vac.dev/assets/img/vac.png" />
+  
+  <!-- end of Twitter cards -->
+
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/OpenSans-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+  <body class="h-full flex flex-col font-body">
+    <div class="flex-grow container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6">
+      <header class="sm:sticky sm:top-0 bg-white z-50">
+  <div class="container max-w-screen-xl sm:border-b">
+    <div class="nav-section flex justify-between items-center py-3 md:py-5 lg:py-10">
+      <div class="logo md:pr-8 l:p-0">
+        <a href="/"><img src="/assets/img/logo.png" alt="Vac logo" class="w-9 h-11" /></a>
+      </div>
+      <div class="flex justify-between items-center w-9/12">
+        <div class="burger block sm:hidden z-50">
+          <button class="burger__button burger__button--open fixed top-2 right-5 w-12 h-12" type="button" aria-label="Mobile menu button">
+            <img class="burger__icon" src="/assets/img/burger.svg" alt="Open menu button" />
+          </button>
+          <button class="burger__button burger__button--close hidden fixed top-2 right-5 w-12 h-12" type="button" aria-label="Close mobile menu button">
+            <img class="burger__icon burger__icon--close" src="/assets/img/close.svg" alt="Close menu button" />
+          </button>
+        </div>
+
+        <nav class="nav max-w-screen-xm md:max-w-screen-sl container">
+          <ul class="nav__list hidden sm:flex justify-between container text-xs font-semibold md:pr-8 l:p-0">
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join Vac</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer">Forum</a>
+  
+</li>
+ 
+          </ul>
+        </nav>
+
+        <ul class="social items-center hidden md:flex">
+          <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+        </ul>
+      </div>
+
+      <div class="overlay container max-w-screen-sm w-full hidden sm:hidden fixed top-0 right-0 h-screen bg-black bg-opacity-40 z-30">
+        <nav class="nav-mobile hidden fixed top-0 right-0 flex flex-col justify-between items-center pt-14 px-12 pb-5 bg-white w-9/12 h-3/4 z-40">
+          <ul class="nav__list flex flex-col flex-1 justify-between items-center container box-content w-32 h-auto max-h-nav text-xs font-normal">
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join Vac</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer">Forum</a>
+  
+</li>
+ 
+          </ul>
+          <ul class="social items-center flex mt-8">
+            <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="bg-white text-black flex flex-col"><section class="container max-w-screen-xl flex flex-col items-center pt-10 pb-0 md:pb-10 lg:pb-0">
+  <div class="info-block max-w-680 pb-5 sm:pb-10 overflow-hidden">
+    <div class="post mb-10">
+      <h1 class="text-xl md:text-xxl mb-5 sm:max-w-md lg:max-w-2xl">Opinion: Pseudo-ethics in the Surveillance Tech Industry</h1>
+      <div>
+        <span class="text-s lg:text-base"> 03 Dec 2021 • by </span>
+        <a href="/authors/circe" class="text-s lg:text-base font-bold hover:underline">circe</a>
+      </div>
+    </div>
+    <div class="post__content"><p><em>This is an opinion piece by pseudonymous contributor, circe.</em></p>
+
+<h2 id="preface">Preface</h2>
+
+<p>The Vac team aims to provide a public good in the form of freely available, open source tools and protocols for decentralized communication.
+As such, we value our independence and the usefulness of our protocols for a wide range of applications.
+At the same time, we realize that all technical development, including ours, has a moral component.
+As a diverse team we are guided by a shared devotion to the principles of human rights and liberty.
+This explains why we place such a high premium on security, censorship-resistance and privacy -
+a stance we <a href="https://our.status.im/our-principles/">share with the wider Status Network</a>.
+The post below takes a different approach from our usual more technical analyses,
+by starting to peel back the curtain on the ethical shortfalls of the global surveillance tech industry.</p>
+
+<h2 id="spotlight-on-an-industry">Spotlight on an industry</h2>
+
+<p><a href="https://www.apple.com/newsroom/2021/11/apple-sues-nso-group-to-curb-the-abuse-of-state-sponsored-spyware/">Apple’s announcement</a> of their lawsuit against Israel’s NSO Group
+marks the latest in a series of recent setbacks for the surveillance tech company.
+In early November, the <a href="https://public-inspection.federalregister.gov/2021-24123.pdf">United States blacklisted the firm</a>,
+citing concerns about the use of their spyware by foreign governments targeting civilians such as “journalists, businesspeople, activists” and more.
+The company is already <a href="https://www.reuters.com/article/us-facebook-cyber-whatsapp-nsogroup-idUSKBN1X82BE">embroiled in a lawsuit with Whatsapp</a>
+over their exploit of the chat app’s video calling service to install malware on target devices.
+NSO Group’s most infamous product, <a href="https://forbiddenstories.org/case/the-pegasus-project/">Pegasus</a>, operates as a hidden exploit installed on victims’ mobile phones,
+sometimes without even requiring as much as an unguarded click on a malicious link.
+It has the potential to lay bare, and report to its owners, <em>everything</em> within the reach of the infected device.
+For most people this amounts to a significant portion of their private lives and thoughts.
+Pegasus can read your private messages (even encrypted), collect your passwords, record calls, track your location and access your device’s microphone and camera.
+No activity or application on an infected phone would be hidden.</p>
+
+<p>The latest controversies are perhaps less because of the novelty of the revelations -
+the existence of Pegasus has been known to civil activists <a href="https://www.bbc.com/news/technology-37192670">since at least 2016</a>.
+Rather, the public was reminded again of the potential scope of surveillance tech
+in the indiscriminate use of Pegasus on private citizens.
+This has far-reaching implications for human freedoms worldwide.
+Earlier this year, a <a href="https://www.theguardian.com/world/2021/jul/18/revealed-leak-uncovers-global-abuse-of-cyber-surveillance-weapon-nso-group-pegasus">leaked list of over 50,000 targets</a>, or possible targets, of Pegasus included
+the phone numbers of human rights advocates, independent journalists, lawyers and political activists.
+This should have come as no surprise.
+The type of autocratically inclined agents, and governments, who would venture to buy and use such invasive cyber-arms often target those they find politically inconvenient.
+Pegasus, and similar technologies, simply extend the reach and capacity of such individuals and governments -
+no border or distance, no political rank or social advantage, no sanctity of profession or regard for dignity,
+provide any indemnity from becoming a victim.
+Your best hope is to remain uninteresting enough to escape consideration.</p>
+
+<p>The NSO Group has, of course, denied allegations of culpability and questions the authenticity of the list.
+At this stage, the latter is almost beside the point:
+Amnesty International’s cybersecurity team, Security Lab, <em>did</em> find <a href="https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/#_ftn1">forensic evidence of Pegasus</a> on the phones of several volunteers whose numbers appeared on the original list,
+including those of journalists and human rights activists.
+(Security Lab has since opened up their <a href="https://github.com/mvt-project/mvt">infection finding tool</a> to the public.)
+French intelligence has similarly <a href="https://www.theguardian.com/news/2021/aug/02/pegasus-spyware-found-on-journalists-phones-french-intelligence-confirms">inspected and confirmed</a> infection of at least three devices belonging to journalists.
+The phones of several people who were close to the Saudi-American journalist, Jamal Khashoggi, were <a href="https://www.bbc.com/news/world-57891506">confirmed hacked</a>
+both before and after Khashoggi’s brutal murder at the Saudi embassy in Istanbul in 2018.
+<a href="https://www.theguardian.com/news/2021/sep/21/hungary-journalist-daniel-nemeth-phones-infected-with-nso-pegasus-spyware">More reports</a> of confirmed Pegasus hacks are still published with some regularity.
+It is now an open secret that many authoritarian governments have bought Pegasus.
+It’s not difficult to extrapolate from existing reports and such clients’ track records
+what the potential injuries to human freedoms are that they can inflict with access to such a powerful cyberweapon.</p>
+
+<h2 id="a-typical-response">A typical response</h2>
+
+<p><a href="https://www.theguardian.com/news/2021/jul/18/response-from-nso-and-governments">NSO’s response</a> to the allegations follows a textbook approach
+of avoiding earnest ethical introspection on the manufacturing, and selling, of cyber-arms.
+Firstly, shift ethical responsibility to a predetermined process, a list of checkboxes of your own making.
+The Group, for example, claims to sell only to “vetted governments”, following a classification process
+of which they have now <a href="https://www.nsogroup.com/wp-content/uploads/2021/06/ReportBooklet.pdf">published some procedural details</a> but no tangible criteria.
+The next step is to reaffirm continuously, and repetitively, your dedication to the <em>legal</em> combat against crime,
+<a href="https://www.nsogroup.com/wp-content/uploads/2021/06/ReportBooklet.pdf">“legitimate law enforcement agencies”</a> (note the almost tautological phrasing),
+adherence to international arms trade laws,
+compliance clauses in customer contracts, etc.
+Thirdly, having been absolved of any moral suspicions that might exist about product and process,
+from conception to engineering to trade,
+distance yourself from the consequences of its use in the world.
+<a href="https://www.theguardian.com/news/2021/jul/18/response-from-nso-and-governments">“NSO does not operate its technology, does not collect, nor possesses, nor has any access to any kind of data of its customers.”</a>
+It is interesting that directly after this statement they claim with contradictory confidence that
+their “technology was not associated in any way with the heinous murder of Jamal Khashoggi”.
+The unapologetic tone seems hardly appropriate when the same document confirms that the Group had to
+shut down customers’ systems due to “confirmed misuse” and have had to do so “multiple times” in the past.
+Given all this, the response manages to evade any serious interrogation of the “vetting” process itself,
+which forced the company to reject “approximately 15% of potential new opportunities for Pegasus” in one year.
+Courageous.</p>
+
+<p>We have heard this all before.
+There exists a multi-billion dollar industry of private companies and engineering firms <a href="https://www.economist.com/business/2019/12/12/offering-software-for-snooping-to-governments-is-a-booming-business">thriving on proceeds</a> from
+selling surveillance tools and cyber-arms to dubious agencies and foreign governments.
+In turn, the most power-hungry and oppressive regimes often <em>rely</em> on such technological innovations -
+for which they lack the in-country engineering expertise -
+to maintain control, suppress uprisings, intimidate opposing journalists, and track their citizens.
+It’s a lucrative business opportunity, and resourceful companies have sprung up everywhere to supply this demand,
+often in countries where citizens, including employees of the company, would be horrified if they were similarly subject to the oppressions of their own products.
+When, in 2014, Italy’s <em>HackingTeam</em> were pulsed by the United Nations about their (then alleged) selling of spyware to Sudan,
+which would have been a contravention of the UN’s weapon export ban,
+they simply replied that their product was not controlled as a weapon and therefore not subject to such scrutiny.
+They remained within their legal bounds, technically.
+Furthermore, they similarly shifted ethical responsibility to external standards of legitimacy,
+claiming their <a href="https://citizenlab.ca/2014/02/mapping-hacking-teams-untraceable-spyware/">“software is not sold to governments that are blacklisted by the EU, the US, NATO, and similar international organizations”</a>.
+When the company themselves were <a href="https://www.wired.com/2015/07/hacking-team-breach-shows-global-spying-firm-run-amok/">hacked in 2015</a>,
+revelations (confirmations, that is) of widespread misuse by repressive governments were damaging enough to force them to disappear and rebrand as Memento Labs.
+<a href="https://www.mem3nt0.com/en/">Their website</a> boasts an impressive list of statutes, regulations, procedures, export controls and legal frameworks,
+all of which the rebranded hackers proudly comply with.
+Surely no further ethical scrutiny is necessary?</p>
+
+<h2 id="ethics--the-law">Ethics != the law</h2>
+
+<h3 id="the-law-is-trailing-behind">The law is trailing behind</h3>
+
+<p>Such recourse to the <em>legality</em> of your action as ethical justification is moot for several reasons.
+The first is glaringly obvious -
+our laws are ill-equipped to address the implications of modern technology.
+Legal systems are a cumbersome inheritance built over generations.
+This is especially true of the statutes and regulations governing international trade, behind which these companies so often hide.
+Our best legal systems are trailing miles behind the technology for which we seek guidelines.
+Legislators are still struggling to make sense of technologies like face recognition,
+the repercussions of smart devices acting “on their own” and biases in algorithms.
+To claim you are performing ethical due diligence by resorting to an outdated and incomplete system of legal codes is disingenuous.</p>
+
+<h3 id="the-law-depends-on-ethics">The law depends on ethics</h3>
+
+<p>The second reason is more central to my argument,
+and an important flaw in these sleight of hand justifications appearing from time to time in the media.
+Ethics can in no way be confused as synonymous with legality or legitimacy.
+These are incommensurable concepts.
+In an ideal world, of course, the law is meant to track the minimum standards of ethical conduct in a society.
+Laws are often drafted exactly from some ethical, and practical, impulse to minimize harmful conduct
+and provide for corrective and punitive measures where transgressions do occur.
+The law, however, has a much narrower scope than ethics.
+It can be just or unjust.
+In fact, it is in need of ethics to constantly reform.
+Ethics and values are born out of collective self-reflection.
+It develops in our conversation with ourselves and others about the type of society we strive for.
+As such, an ethical worldview summarizes our deepest intuitions about how we should live and measure our impact on the world.
+For this reason, ethics is primarily enforced by social and internal pressures, not legal boundaries -
+our desire to do what <em>ought</em> to be done, however we define that.
+Ethics is therefore a much grander scheme than global legal systems
+and the diplomatic frameworks that grants legitimacy to governments.
+These are but one limited outflow of the human aspiration to form societies in accordance with our ideologies and ethics.</p>
+
+<h3 id="international-law-is-vague-and-exploitable">International law is vague and exploitable</h3>
+
+<p>Of course, the cyber-arms trade has a favorite recourse, <em>international</em> law, which is even more limited.
+Since such products are seldomly sold to governments and agencies within the country of production,
+it enables a further distancing from consequences.
+Many private surveillance companies are based in fairly liberal societies with (seemingly) strict emphases on human rights in their domestic laws.
+International laws are much more complicated - for opportunists a synonym for “more grey areas in which to hide”.
+Company conduct can now be governed, and excused, by a system that follows
+the whims of autocrats with exploitative intent and vastly different ethical conceptions from the company’s purported aims.
+International law, and the ways it is most often enforced by way of, say, UN-backed sanctions,
+have long been shaped by the compromises of international diplomacy.
+To be blunt: these laws are weak and subject to exactly the sort of narrow interests behind which mercenaries have always hidden.
+The surveillance tech industry is no exception.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>My point is simple:
+selling cyber-arms with the potential to become vast tools of oppression to governments and bodies with blatant histories of human rights violations,
+and all but the publicly announced intention to continue operating in this way,
+is categorically unconscionable.
+This seems obvious no matter what ethics system you argue from,
+provided it harbors any consideration for human dignity and freedom.
+It is a sign of poor moral discourse that such recourses to law and legitimacy are often considered synonymous with ethical justification.
+“<em>I have acted within the bounds of law</em>”, <em>“We supply only to legitimate law enforcement agencies”</em>, etc. are no substitutes.
+Ethical conduct requires an honest evaluation of an action against some conception of “the good”,
+however you define that.
+Too often the surveillance tech industry precisely sidesteps this question,
+both in internal processes and external rationalisations to a concerned public.</p>
+
+<p>John Locke, he of the life-liberty-and-property, articulated the idea that government exists solely through the consent of the governed.
+Towards the end of the 17th century, he wrote in his <em>Second Treatise on Civil Government</em>,
+“[w]henever legislators endeavor to take away,
+and destroy the property of the people, or to reduce them to slavery under arbitrary power,
+they put themselves in a state of war with the people, who are thereupon absolved from any further obedience”.
+The inference is straightforward and humanist in essence:
+legitimacy is not something that is conferred by governments and institutions.
+Rather, they derive their legitimacy from us, their citizens, holding them to standards of ethics and societal ideals.
+This legitimacy only remains in tact as long as this mandate is honored and continuously extended by a well-informed public.
+This is the principle of informed consent on which all reciprocal ethics is based.</p>
+
+<p>The surveillance tech industry may well have nothing more or less noble in mind than profit-making within legal bounds
+when developing and selling their products.
+However, when such companies are revealed again and again to have supplied tools of gross human rights violations to known human rights violators,
+they will do well to remember that ethics always <em>precedes</em> requirements of legality and legitimacy.
+It is a fallacy to take normative guidance from the concept of “legitimacy”
+if the concept itself depends on such normative guidelines for definition.
+Without examining the ethical standards by which institutions, governments, and laws, were created,
+no value-judgements about their legitimacy can be made.
+Hiding behind legal compliance as substitute for moral justification is not enough.
+Targets of increasingly invasive governmental snooping are too often chosen precisely to suppress the mechanisms from which the legitimacy of such governments flow -
+the consent of ordinary civilians.
+Free and fair elections, free speech, free media, freedom of thought are all at risk.</p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li><a href="https://our.status.im/our-principles/">Status Principles</a></li>
+  <li><a href="https://public-inspection.federalregister.gov/2021-24123.pdf">Federal Register: Addition of Certain Entities to the Entity List</a></li>
+  <li><a href="https://forbiddenstories.org/case/the-pegasus-project/">forbiddenstories.org: The Pegasus Project</a></li>
+  <li><a href="https://www.theguardian.com/news/series/pegasus-project">theguardian.com: The Pegasus Project</a></li>
+  <li><a href="https://www.amnesty.org/en/latest/research/2021/07/forensic-methodology-report-how-to-catch-nso-groups-pegasus/#_ftn1">amnesty.org Forensic Methodology Report: How to catch NSO Group’s Pegasus</a></li>
+  <li><a href="https://www.apple.com/newsroom/2021/11/apple-sues-nso-group-to-curb-the-abuse-of-state-sponsored-spyware/">Apple sues NSO Group to curb the abuse of state-sponsored spyware</a></li>
+  <li><a href="https://www.bbc.com/news/technology-37192670">bbc.com: Who are the hackers who cracked the iPhone?</a></li>
+  <li><a href="https://www.bbc.com/news/world-57891506">bbc.com: Pegasus: Who are the alleged victims of spyware targeting?</a></li>
+  <li><a href="https://citizenlab.ca/2014/02/mapping-hacking-teams-untraceable-spyware/">citizenlab.ca: Mapping Hacking Team’s “Untraceable” Spyware</a></li>
+  <li><a href="https://www.economist.com/business/2019/12/12/offering-software-for-snooping-to-governments-is-a-booming-business">economist.com: Offering software for snooping to governments is a booming business</a></li>
+  <li><a href="https://www.mem3nt0.com/en/">Memento Labs</a></li>
+  <li><a href="https://github.com/mvt-project/mvt">Mobile Verification Toolkit to identify compromised devices</a></li>
+  <li><a href="https://www.nsogroup.com/wp-content/uploads/2021/06/ReportBooklet.pdf">NSO Group: Transparency and Responsibility Report 2021</a></li>
+  <li><a href="https://www.reuters.com/article/us-facebook-cyber-whatsapp-nsogroup-idUSKBN1X82BE">reuters.com: WhatsApp sues Israel’s NSO for allegedly helping spies hack phones around the world</a></li>
+  <li><a href="https://www.wired.com/2015/07/hacking-team-breach-shows-global-spying-firm-run-amok/">wired.com: Hacking Team Breach Shows a Global Spying Firm Run Amok</a></li>
+</ul>
+</div>
+  </div>
+</section>
+</main>
+    </div>
+    <footer class="footer bg-black flex flex-shrink-0 justify-center">
+  <div class="container max-w-screen-xl flex sl:justify-between lm:justify-start p-5 md:px-12 md:pt-5 lg:py-10">
+    <div class="logo mr-10 sm:mr-0 sm:w-2/12 lg:w-3/12">
+      <a href="/"><img src="/assets/img/logo.png" alt="Vac logo" class="w-9 h-11" /></a>
+    </div>
+
+    <div class="flex flex-col xm:flex-row xm:justify-between sm:w-10/12 lg:w-9/12">
+      <p class="hidden sl:inline-block sl:mr-10 text-xxs lg:text-base text-white opacity-75">Vac researches peer-to-peer, private, censorship resistant communication</p>
+      <nav class="flex max-w-xs mr-0 xm:mr-5 l:mr-32 mb-5 sm:mb-0">
+        <div class="flex">
+          <div class="flex flex-col mr-5 sm:mr-10 sl:mr-14">
+            <p class="text-xxs lg:text-base text-white opacity-75 mb-5 lg:mb-8">Research</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="/research-log" target="_blank" rel="noopener noreferrer">Log</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+</li>
+ 
+            </ul>
+          </div>
+          <div class="flex flex-col sl:mr-14">
+            <p class="text-xxs lg:text-base text-white opacity-75 mb-5 lg:mb-8">Socials</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">Twitter</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">Discord</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://t.me/vacp2p" target="_blank" rel="noopener noreferrer">Telegram</a>
+</li>
+ 
+            </ul>
+          </div>
+        </div></nav></div>
+  </div>
+</footer>
+ <script src="/assets/js/main.min.js"></script>
+<script src="/assets/js/smooth-scroll.min.js"></script>
+
+  </body>
+</html>

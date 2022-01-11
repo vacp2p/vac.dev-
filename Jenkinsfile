@@ -11,11 +11,12 @@ pipeline {
   }
 
   environment {
-    SCP_OPTS = 'StrictHostKeyChecking=no'
-    DEV_HOST = 'jenkins@node-01.do-ams3.proxy.misc.statusim.net'
-    DEV_SITE = 'dev.vac.dev'
     GH_USER = 'status-im-auto'
     GH_MAIL = 'auto@status.im'
+    /* Dev site deployment. */
+    DEV_SITE = 'dev.vac.dev'
+    DEV_HOST = 'jenkins@node-01.do-ams3.sites.misc.statusim.net'
+    SCP_OPTS = 'StrictHostKeyChecking=no'
     /* Avoid need for sudo when using bundler. */
     GEM_HOME = "${env.HOME}/.gem"
   }
@@ -31,7 +32,7 @@ pipeline {
 
     stage('Install Deps') {
       steps {
-        sh 'yarn install --ignore-optional'
+        sh 'yarn install'
         sh 'bundle install'
       }
     }

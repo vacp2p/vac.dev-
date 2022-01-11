@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en-US">
+  <head>
+  
+  <title>Vac - [Talk at COSCUP] Vac, Waku v2 and Ethereum Messaging</title>
+  
+
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Vac</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+  <noscript><img src="https://api.simpleanalytics.io/hello.gif" alt="" /></noscript>
+
+  <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+  <script>
+    (function (f, a, t, h, o, m) {
+      a[h] =
+        a[h] ||
+        function () {
+          (a[h].q = a[h].q || []).push(arguments);
+        };
+      (o = f.createElement("script")), (m = f.getElementsByTagName("script")[0]);
+      o.async = 1;
+      o.src = t;
+      o.id = "fathom-script";
+      m.parentNode.insertBefore(o, m);
+    })(document, window, "//fathom.status.im/tracker.js", "fathom");
+    fathom("set", "siteId", "YELIA");
+    fathom("trackPageview");
+  </script>
+  <!-- / Fathom -->
+
+  <!-- Twitter cards -->
+  <meta name="twitter:site" content="@vacp2p" />
+  <meta name="twitter:creator" content="@oskarth" />
+  <meta name="twitter:title" content="[Talk at COSCUP] Vac, Waku v2 and Ethereum Messaging" />
+
+  
+  <meta name="twitter:description" content="Learn more about Waku v2, its origins, goals, protocols, implementation and ongoing research. Understand how it is used and how it can be useful for messaging in Ethereum." />
+   
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://vac.dev/assets/img/coscup-waku/talk.png" />
+  
+  <!-- end of Twitter cards -->
+
+  <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/OpenSans-SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+
+  <body class="h-full flex flex-col font-body">
+    <div class="flex-grow container max-w-screen-xl mx-auto px-5 md:px-12 lg:pt-6">
+      <header class="sm:sticky sm:top-0 bg-white z-50">
+  <div class="container max-w-screen-xl sm:border-b">
+    <div class="nav-section flex justify-between items-center py-3 md:py-5 lg:py-10">
+      <div class="logo md:pr-8 l:p-0">
+        <a href="/"><img src="/assets/img/logo.png" alt="Vac logo" class="w-9 h-11" /></a>
+      </div>
+      <div class="flex justify-between items-center w-9/12">
+        <div class="burger block sm:hidden z-50">
+          <button class="burger__button burger__button--open fixed top-2 right-5 w-12 h-12" type="button" aria-label="Mobile menu button">
+            <img class="burger__icon" src="/assets/img/burger.svg" alt="Open menu button" />
+          </button>
+          <button class="burger__button burger__button--close hidden fixed top-2 right-5 w-12 h-12" type="button" aria-label="Close mobile menu button">
+            <img class="burger__icon burger__icon--close" src="/assets/img/close.svg" alt="Close menu button" />
+          </button>
+        </div>
+
+        <nav class="nav max-w-screen-xm md:max-w-screen-sl container">
+          <ul class="nav__list hidden sm:flex justify-between container text-xs font-semibold md:pr-8 l:p-0">
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join Vac</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer">Forum</a>
+  
+</li>
+ 
+          </ul>
+        </nav>
+
+        <ul class="social items-center hidden md:flex">
+          <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+        </ul>
+      </div>
+
+      <div class="overlay container max-w-screen-sm w-full hidden sm:hidden fixed top-0 right-0 h-screen bg-black bg-opacity-40 z-30">
+        <nav class="nav-mobile hidden fixed top-0 right-0 flex flex-col justify-between items-center pt-14 px-12 pb-5 bg-white w-9/12 h-3/4 z-40">
+          <ul class="nav__list flex flex-col flex-1 justify-between items-center container box-content w-32 h-auto max-h-nav text-xs font-normal">
+             <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#work">Work</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#about">About</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/#join">Join Vac</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/research-log">Research log</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a class="nav__link" href="/media">Media</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+  
+</li>
+  <li class="hover:opacity-50">
+  
+  <a href="https://forum.vac.dev/" target="_blank" rel="noopener noreferrer">Forum</a>
+  
+</li>
+ 
+          </ul>
+          <ul class="social items-center flex mt-8">
+            <li class="pr-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M24.8872 3.04499C23.9872 3.43499 23.0572 3.70498 22.0672 3.82499C23.0872 3.22498 23.8672 2.26499 24.2272 1.09499C23.2672 1.66499 22.2172 2.05499 21.1072 2.29499C20.2072 1.33499 18.9172 0.734985 17.5072 0.734985C14.7772 0.734985 12.5872 2.95499 12.5872 5.65499C12.5872 6.04499 12.6172 6.40498 12.7072 6.76498C8.62721 6.58498 5.02721 4.60498 2.59721 1.63499C0.857207 4.75498 2.80721 7.33499 4.09721 8.20499C3.31721 8.20499 2.53721 7.96499 1.87721 7.60499C1.87721 10.035 3.58721 12.045 5.80721 12.495C5.32721 12.645 4.24721 12.735 3.58721 12.585C4.21721 14.535 6.04721 15.975 8.17721 16.005C6.49721 17.325 4.03721 18.375 0.887207 18.045C3.07721 19.455 5.65721 20.265 8.44721 20.265C17.5072 20.265 22.4272 12.765 22.4272 6.28499C22.4272 6.07499 22.4272 5.86499 22.3972 5.65499C23.4172 4.90499 24.2572 4.03499 24.8872 3.04499Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li class="pr-5">
+  <a href="https://github.com/vacp2p" target="_blank" rel="noopener noreferrer">
+    <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M12.8857 0.856567C6.26021 0.856567 0.915339 6.20154 0.950043 12.7951C0.9778 18.0687 4.43935 22.5427 9.21766 24.1227C9.81824 24.2327 10.0353 23.864 10.0336 23.5474C10.0321 23.2635 10.0177 22.5129 10.0065 21.5171C6.67274 22.238 5.95552 19.9163 5.95552 19.9163C5.40376 18.5369 4.61433 18.1698 4.61433 18.1698C3.51994 17.4296 4.69151 17.4444 4.69151 17.4444C5.89646 17.5291 6.53549 18.6751 6.53549 18.6751C7.61609 20.4989 9.35182 19.9727 10.0342 19.6665C10.1382 18.8951 10.4459 18.3689 10.7878 18.0702C8.12222 17.7684 5.31483 16.7443 5.29076 12.1708C5.2839 10.8672 5.74629 9.80152 6.50989 8.96619C6.3838 8.66445 5.96641 7.45009 6.61027 5.80766C6.61027 5.80766 7.61658 5.4866 9.9167 7.03094C10.8723 6.76636 11.8976 6.63408 12.9191 6.62962C13.9376 6.63556 14.9658 6.76636 15.9257 7.03242C18.2081 5.48809 19.2163 5.80914 19.2163 5.80914C19.8789 7.45306 19.4743 8.66594 19.3529 8.96767C20.1268 9.80301 20.5959 10.8687 20.6028 12.1723C20.6269 16.7577 17.8272 17.767 15.1558 18.0628C15.5882 18.4314 15.976 19.1597 15.9819 20.273C15.9903 21.8693 15.9821 23.1565 15.9841 23.5474C15.9858 23.867 16.2038 24.2386 16.8122 24.1212C21.5663 22.5397 24.9778 18.0672 24.95 12.7951C24.9153 6.20154 19.5142 0.856567 12.8857 0.856567Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">
+    <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="hover:opacity-50">
+      <path
+        d="M22.7861 9.04256C21.8482 5.74455 20.7799 4.04048 20.7627 4.00991C20.7017 3.93459 19.189 2.104 15.5271 0.75L15.0353 2.0764C16.7774 2.72057 18.0116 3.50643 18.6899 4.01419C16.6599 3.40408 14.2431 3.03041 12.1008 3.03041C9.95851 3.03041 7.53775 3.40408 5.50128 4.01419C6.18496 3.50648 7.42744 2.72057 9.17631 2.0764L8.69846 0.75C5.02238 2.104 3.49044 3.93459 3.42863 4.00991C3.41108 4.04048 2.32479 5.74455 1.35221 9.04256C0.414855 12.2208 0.0415214 16.7045 0.027872 16.8843C0.109225 17.0131 1.97891 20.25 7.12077 20.25L8.43406 18.3536C6.97595 17.964 5.58693 17.3357 4.31689 16.4832L5.10228 15.3069C7.15122 16.6822 9.54509 17.4092 12.0251 17.4092C14.5051 17.4092 16.9067 16.6822 18.9701 15.3069L19.7431 16.4832C18.4641 17.3357 17.0684 17.964 15.6062 18.3536L16.8995 20.25C22.0414 20.25 23.9452 17.0131 24.0279 16.8843C24.0161 16.7045 23.69 12.2208 22.7861 9.04256ZM8.79853 12.7392H7.39228L7.40468 10.3841H8.81093L8.79853 12.7392ZM16.7071 12.7392H15.3008L15.3132 10.3841H16.7195L16.7071 12.7392Z"
+        fill="#151512"
+      />
+    </svg>
+  </a>
+</li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+      <main class="bg-white text-black flex flex-col"><section class="container max-w-screen-xl flex flex-col items-center pt-10 pb-0 md:pb-10 lg:pb-0">
+  <div class="info-block max-w-680 pb-5 sm:pb-10 overflow-hidden">
+    <div class="post mb-10">
+      <h1 class="text-xl md:text-xxl mb-5 sm:max-w-md lg:max-w-2xl">[Talk at COSCUP] Vac, Waku v2 and Ethereum Messaging</h1>
+      <div>
+        <span class="text-s lg:text-base"> 06 Aug 2021 • by </span>
+        <a href="/authors/oskarth" class="text-s lg:text-base font-bold hover:underline">oskarth</a>
+      </div>
+    </div>
+    <div class="post__content"><p><em>This is the English version of a talk originally given in Chinese at COSCUP in Taipei. There is a <a href="https://www.youtube.com/watch?v=s0ATpQ4_XFc">video recording</a> with Chinese and English subtitles.</em></p>
+
+<hr />
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Hi everyone!</p>
+
+<p>Today I’ll talk to you about Waku v2. What it is, what problems it is solving,
+and how it can be useful for things such as messaging in Ethereum. First, let me
+start with some brief background.</p>
+
+<h2 id="brief-history-and-background">Brief history and background</h2>
+
+<p>Back when Ethereum got started, there used to be this concept of the “holy
+trinity”. You had Ethereum for compute/consensus, Swarm for storage, and Whisper
+for messaging. This is partly where the term Web3 comes from.</p>
+
+<p>Status started out as an app with the goal of being a window onto Ethereum and
+a secure messenger. As one of the few, if not the only, apps using Whisper in
+production, not to mention on a mobile phone, we quickly realized there were
+problems with the underlying protocols and infrastructure. Protocols such as
+Whisper weren’t quite ready for prime time yet when it came to things such as
+scalability and working in the real world.</p>
+
+<p>As we started addressing some of these challenges, and moved from app
+developement to focusing on protocols, research and infrastructure, we created
+Vac. Vac is an r&amp;d unit doing protocol research focused on creating modular p2p
+messaging protocols for private, secure, censorship resistant communication.</p>
+
+<p>I won’t go into too much detail on the issues with Whisper, if you are
+interested in this check out this talk
+<a href="https://www.youtube.com/watch?v=6lLT33tsJjs">here</a> or this
+<a href="https://vac.dev/fixing-whisper-with-waku">article</a>.</p>
+
+<p>In a nutshell, we forked Whisper to address immediate shortcomings and this
+became Waku v1. Waku v2 is complete re-thought implementation from scratch on top
+of libp2p. This will be the subject of today’s talk.</p>
+
+<h2 id="waku-v2">Waku v2</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>Waku v2 is a privacy-preserving peer-to-peer messaging protocol for resource
+restricted devices. We can look at Waku v2 as several things:</p>
+
+<ul>
+  <li>Set of protocols</li>
+  <li>Set of implementations</li>
+  <li>Network of nodes</li>
+</ul>
+
+<p>Let’s first look at what the goals are.</p>
+
+<h3 id="goals">Goals</h3>
+
+<p>Waku v2 provides a PubSub based messaging protocol with the following
+characteristics:</p>
+
+<ol>
+  <li><strong>Generalized messaging</strong>. Applications that require a messaging protocol to
+communicate human to human, machine to machine, or a mix.</li>
+  <li><strong>Peer-to-peer</strong>. For applications that require a p2p solution.</li>
+  <li><strong>Resource restricted</strong>. For example, running with limited bandwidth, being
+mostly-offline, or in a browser.</li>
+  <li><strong>Privacy</strong>. Applications that have privacy requirements, such as pseudonymity,
+metadata protection, etc.</li>
+</ol>
+
+<p>And to provide these properties in a modular fashion, where applications can
+choose their desired trade-offs.</p>
+
+<h3 id="protocols">Protocols</h3>
+
+<p>Waku v2 consists of several protocols. Here we highlight a few of the most
+important ones:</p>
+
+<ul>
+  <li>10/WAKU2 - main specification, details how all the pieces fit together</li>
+  <li>11/RELAY - thin layer on top of GossipSub for message dissemination</li>
+  <li>13/STORE - fetching of historical messages</li>
+  <li>14/MESSAGE - message payload</li>
+</ul>
+
+<p>This is the recommended subset for a minimal Waku v2 client.</p>
+
+<p>In addition to this there are many other types of specifications at various
+stages of maturity, such as: content based filtering, bridge mode to Waku v1,
+JSON RPC API, zkSNARKS based spam protection with RLN, accounting and
+settlements with SWAP, fault-tolerant store nodes, recommendations around topic
+usage, and more.</p>
+
+<p>See https://rfc.vac.dev/ for a full overview.</p>
+
+<h3 id="implementations">Implementations</h3>
+
+<p>Waku v2 consists of multiple implementations. This allows for client diversity,
+makes it easier to strengthen the protocols, and allow people to use Waku v2 in
+different contexts.</p>
+
+<ul>
+  <li>nim-waku - the reference client written in Nim, most full-featured.</li>
+  <li>js-waku - allow usage of Waku v2 from browsers, focus on interacting with dapps.</li>
+  <li>go-waku - subset of Waku v2 to ease integration into the Status app.</li>
+</ul>
+
+<h3 id="testnet-huilong-and-dogfooding">Testnet Huilong and dogfooding</h3>
+
+<p>In order to test the protocol we have setup a testnet across all implementations
+called Huilong. Yes, that’s the Taipei subway station!</p>
+
+<p><img src="assets/img/coscup-waku/huilong.jpg" alt="" /></p>
+
+<p>Among us core devs we have disabled the main #waku Discord channel used for
+development, and people run their own node connected to this toy chat application.</p>
+
+<p>Feel free to join and say hi! Instructions can be found here:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/status-im/nim-waku/blob/master/docs/tutorial/chat2.md">nim-waku chat</a></p>
+  </li>
+  <li>
+    <p><a href="https://status-im.github.io/js-waku/">js-waku chat</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/status-im/go-waku/tree/master/examples/chat2">go-waku chat</a></p>
+  </li>
+</ul>
+
+<h3 id="research">Research</h3>
+
+<p>While Waku v2 is being used today, we are actively researching improvements.
+Since the design is modular, we can gracefully introduce new capabilities. Some
+of these research areas are:</p>
+
+<ul>
+  <li>Privacy-preserving spam protection using zkSNARKs and RLN</li>
+  <li>Accounting and settlement of resource usage to incentivize nodes to provide services with SWAP</li>
+  <li>State synchronization for store protocol to make it easier to run a store node without perfect uptime</li>
+  <li>Better node discovery</li>
+  <li>More rigorous privacy analysis</li>
+  <li>Improving interaction with wallets and dapp</li>
+</ul>
+
+<h2 id="use-cases">Use cases</h2>
+
+<p>Let’s look at where Waku v2 is and can be used.</p>
+
+<h3 id="prelude-topics-in-waku-v2">Prelude: Topics in Waku v2</h3>
+
+<p>To give some context, there are two different types of topics in Waku v2. One is
+a PubSub topic, for routing. The other is a content topic, which is used for
+content based filtering. Here’s an example of the default PubSub topic:</p>
+
+<p><code class="highlighter-rouge">/waku/2/default-waku/proto</code></p>
+
+<p>This is recommended as it increases privacy for participants and it is stored by
+default, however this is up to the application.</p>
+
+<p>The second type of topic is a content topic, which is application specific. For
+example, here’s the content topic used in our testnet:</p>
+
+<p><code class="highlighter-rouge">/toychat/2/huilong/proto</code></p>
+
+<p>For more on topics, see https://rfc.vac.dev/spec/23/</p>
+
+<h3 id="status-app">Status app</h3>
+
+<p>In the Status protocol, content topics - topics in Whisper/Waku v1 - are used for several things:</p>
+
+<ul>
+  <li>Contact code topic to discover X3DH bundles for perfect forward secrecy
+    <ul>
+      <li>Partitioned into N (currently 5000) content topics to balance privacy with efficiency</li>
+    </ul>
+  </li>
+  <li>Public chats correspond to hash of the plaintext name</li>
+  <li>Negotiated topic for 1:1 chat with DHKE derived content topic</li>
+</ul>
+
+<p>See more here https://specs.status.im/spec/10</p>
+
+<p>Currently, Status app is in the process of migrating to and testing Waku v2.</p>
+
+<h3 id="dappconnect-ethereum-messaging">DappConnect: Ethereum messaging</h3>
+
+<p>It is easy to think of Waku as being for human messaging, since that’s how it is
+primarily used in the Status app, but the goal is to be useful for generalized
+messaging, which includes Machine-To-Machine (M2M) messaging.</p>
+
+<p>Recall the concept of the holy trinity with Ethereum/Swarm/Whisper and Web3 that
+we mentioned in the beginning. Messaging can be used as a building block for
+dapps, wallets, and users to communicate with each other. It can be used for
+things such as:</p>
+
+<ul>
+  <li>Multisig and DAO vote transactions only needing one on-chain operation</li>
+  <li>Giving dapps ability to send push notifications to users</li>
+  <li>Giving users ability to directly respond to requests from dapps</li>
+  <li>Decentralized WalletConnect</li>
+  <li>Etc</li>
+</ul>
+
+<p>Basically anything that requires communication and doesn’t have to be on-chain.</p>
+
+<h3 id="walletconnect-v2">WalletConnect v2</h3>
+
+<p>WalletConnect is an open protocol for connecting dapps to wallets with a QR
+code. Version 2 is using Waku v2 as a communication channel to do so in a
+decentralized and private fashion.</p>
+
+<p><img src="assets/img/coscup-waku/walletconnect.png" alt="" /></p>
+
+<p>See for more: https://docs.walletconnect.org/v/2.0/tech-spec</p>
+
+<p>WalletConnect v2 is currently in late alpha using Waku v2.</p>
+
+<h3 id="more-examples">More examples</h3>
+
+<ul>
+  <li>Gasless voting and vote aggregation off-chain</li>
+  <li>Dapp games using Waku as player discovery mechanism</li>
+  <li>Send encrypted message to someone with an Ethereum key</li>
+  <li>
+    <Your dapp="" here="">
+
+</Your>
+  </li>
+</ul>
+<p>These are all things that are in progress / proof of concept stage.</p>
+
+<h2 id="contribute">Contribute</h2>
+
+<p>We’d love to see contributions of any form!</p>
+
+<ul>
+  <li>You can play with it here: <a href="https://github.com/status-im/nim-waku/blob/master/docs/tutorial/chat2.md">nim-waku chat</a> (/ <a href="https://status-im.github.io/js-waku/">js-waku browser chat</a>)</li>
+  <li>Use Waku to build a dapp: <a href="https://status-im.github.io/js-waku/docs/">js-waku docs</a></li>
+  <li>Contribute to code: <a href="https://github.com/status-im/js-waku">js-waku</a> / <a href="https://github.com/status-im/nim-waku">nim-waku</a></li>
+  <li>Contribute to specs: <a href="https://github.com/vacp2p/rfc">vacp2p/rfc</a></li>
+  <li>We are hiring: Wallet &amp; Dapp Integration Developer, Distributed Systems Engineer, Protocol Engineer, Protocol Researcher - all <a href="https://status.im/our_team/jobs.html">job listings</a></li>
+  <li>Join our new <a href="https://discord.gg/bJCTqS5H">Discord</a></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this talk we’ve gone over the original vision for Web3 and how Waku came to
+be. We’ve also looked at what Waku v2 aims to do. We looked at its protocols,
+implementations, the current testnet as well as briefly on some ongoing
+research for Vac.</p>
+
+<p>We’ve also looked at some specific use cases for Waku. First we looked at how
+Status uses it with different topics. Then we looked at how it can be useful for
+messaging in Ethereum, including for things like WalletConnect.</p>
+
+<p>I hope this talk gives you a better idea of what Waku is, why it exists, and
+that it inspires you to contribute, either to Waku itself or by using it in your
+own project!</p>
+</div>
+  </div>
+</section>
+</main>
+    </div>
+    <footer class="footer bg-black flex flex-shrink-0 justify-center">
+  <div class="container max-w-screen-xl flex sl:justify-between lm:justify-start p-5 md:px-12 md:pt-5 lg:py-10">
+    <div class="logo mr-10 sm:mr-0 sm:w-2/12 lg:w-3/12">
+      <a href="/"><img src="/assets/img/logo.png" alt="Vac logo" class="w-9 h-11" /></a>
+    </div>
+
+    <div class="flex flex-col xm:flex-row xm:justify-between sm:w-10/12 lg:w-9/12">
+      <p class="hidden sl:inline-block sl:mr-10 text-xxs lg:text-base text-white opacity-75">Vac researches peer-to-peer, private, censorship resistant communication</p>
+      <nav class="flex max-w-xs mr-0 xm:mr-5 l:mr-32 mb-5 sm:mb-0">
+        <div class="flex">
+          <div class="flex flex-col mr-5 sm:mr-10 sl:mr-14">
+            <p class="text-xxs lg:text-base text-white opacity-75 mb-5 lg:mb-8">Research</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="/research-log" target="_blank" rel="noopener noreferrer">Log</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://rfc.vac.dev/" target="_blank" rel="noopener noreferrer">Specs</a>
+</li>
+ 
+            </ul>
+          </div>
+          <div class="flex flex-col sl:mr-14">
+            <p class="text-xxs lg:text-base text-white opacity-75 mb-5 lg:mb-8">Socials</p>
+            <ul>
+               <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://twitter.com/vacp2p" target="_blank" rel="noopener noreferrer">Twitter</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://discord.gg/PQFdubGt6d" target="_blank" rel="noopener noreferrer">Discord</a>
+</li>
+  <li class="text-xxs lg:text-base text-white hover:opacity-50 mb-5">
+  <a href="https://t.me/vacp2p" target="_blank" rel="noopener noreferrer">Telegram</a>
+</li>
+ 
+            </ul>
+          </div>
+        </div></nav></div>
+  </div>
+</footer>
+ <script src="/assets/js/main.min.js"></script>
+<script src="/assets/js/smooth-scroll.min.js"></script>
+
+  </body>
+</html>
